@@ -1,0 +1,16 @@
+:Base T42.hlp>Standard
+:Title T42
+1 T42
+2 About T42=About
+2 What's New=News
+2 Using T42=Using
+2 Options
+3 T42 Options=Options
+3 General Options=GeneralOptions
+3 Fonts=FontsOptions
+3 Sounds=SoundsOptions
+3 Secretary Options=SecretaryOptions
+2 Windows
+3 Main Window=MainWindow
+3 Conversation Window=ConversationWindow
+3 Announce Dialog=AnnounceDialog

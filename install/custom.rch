@@ -1,0 +1,10 @@
+#ifdef	STATI_K
+T42.ex_ rcdata discardable "../releast/T42.ex_"
+#else
+T42.ex_ rcdata discardable "../release/T42.ex_"
+#endif
+T42.cn_ rcdata discardable "../release/T42.cn_"
+T42.hl_ rcdata discardable "../release/T42.hl_"
+#ifdef K_ANNED
+mfc42.dl_ rcdata discardable "../redist/mfc42.dl_"
+#endif

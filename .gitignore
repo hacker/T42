@@ -1,0 +1,36 @@
+
+# /
+/Debug
+/Release
+/Releast
+/debug
+/release
+/releast
+/DEBUG
+/RELEASE
+/RELEAST
+/*.mdp
+/*.ncb
+/*.aps
+/redist
+
+# /help/
+/help/T42.HLP
+/help/T42.LOG
+/help/T42.hm
+/help/T42.GID
+
+# /install/
+/install/debug
+/install/pure
+/install/canned
+/install/static
+/install/Debug
+/install/Pure
+/install/Canned
+/install/Static
+/install/DEBUG
+/install/PURE
+/install/CANNED
+/install/STATIC
+/install/*.aps

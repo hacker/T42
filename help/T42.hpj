@@ -1,0 +1,31 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+COMPRESS=12 Hall Zeck
+LCID=0x409 0x0 0x0 ; English (United States)
+REPORT=Yes
+TITLE=T42
+CNT=T42.cnt
+HLP=T42.HLP
+
+[FILES]
+T42.rtf
+
+[ALIAS]
+HIDD_ABOUTBOX=About
+HIDD_ANNOUNCE=AnnounceDialog
+HIDD_OPTIONS_FONTS=FontsOptions
+HIDD_OPTIONS_GENERAL=GeneralOptions
+HIDD_OPTIONS_SECRETARY=SecretaryOptions
+HIDD_OPTIONS_SOUNDS=SoundsOptions
+HIDD_REMOTE=RemoteDialog
+HIDD_T42_DIALOG=MainWindow
+HIDD_T42VIEW=ConversationWindow
+HIDR_MAINFRAME=MainWindow
+HIDR_T42FRAME=ConversationWindow
+
+[MAP]
+#include T42.hm
+
+[WINDOWS]
+Standard="",(1,1,698,940),20740,(r14876671),(r12632256),f2

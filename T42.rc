@@ -1,0 +1,837 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\T42.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\T42.ico"
+IDR_T42FRAME            ICON    DISCARDABLE     "res\\IDR_T42F.ico"
+IDI_FULLCUP             ICON    DISCARDABLE     "res\\fullcup.ico"
+IDR_FULLT42             ICON    DISCARDABLE     "res\\IDR_FULL.ico"
+IDI_BROWSE              ICON    DISCARDABLE     "shared-data/browse-icon.ico"
+IDI_T42CALLNEW          ICON    DISCARDABLE     "res\\T42calln.ico"
+IDI_T42CALLPROCESSED    ICON    DISCARDABLE     "res\\T42callp.ico"
+IDR_FLIPPEDCUP          ICON    DISCARDABLE     "res\\IDR_FLIP.ico"
+IDI_PREPLAY             ICON    DISCARDABLE     "shared-data/play-icon.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 194, 78
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About T42"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "T42, Version 1.5",IDC_STATIC,37,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright © 1998,2002 Klever Group",IDC_STATIC,37,25,119,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,34,18,20
+    ICON            IDR_FLIPPEDCUP,IDC_STATIC,166,34,18,20
+    DEFPUSHBUTTON   "OK",IDOK,81,40,32,14,WS_GROUP
+    PUSHBUTTON      "http://www.klever.net/",IDC_KLEVERNET,107,59,80,12
+END
+
+IDD_T42_DIALOG DIALOGEX 0, 0, 221, 200
+STYLE DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_CLIENTEDGE | WS_EX_CONTEXTHELP | 
+    WS_EX_APPWINDOW
+CAPTION "  Tea For Two  "
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "On &Call:",IDC_STATIC,7,7,93,56,0,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE
+    COMBOBOX        IDC_ONCALL,13,19,81,76,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CTEXT           "When &Away:",IDC_STATIC,13,33,81,8
+    COMBOBOX        IDC_ONCALLAWAY,13,43,81,76,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Calls",IDC_CALLS,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,66,207,67
+    CONTROL         "Recorded Message..",IDC_PREVIEW,"RICHEDIT",WS_VSCROLL | 
+                    WS_TABSTOP | 0xc184,7,134,207,59
+    PUSHBUTTON      "&Tea",IDC_TALK,173,7,41,13
+    PUSHBUTTON      "&Options",IDC_OPTIONS,173,21,41,13
+    PUSHBUTTON      "E&xit",IDOK,173,35,41,13
+    PUSHBUTTON      "&Help",ID_HELP,173,49,41,13
+    DEFPUSHBUTTON   "",IDCANCEL,0,0,6,6,NOT WS_VISIBLE
+    CONTROL         "A&way",IDC_AWAY,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_MULTILINE | WS_TABSTOP,101,7,41,56,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+END
+
+IDD_REMOTE DIALOGEX 0, 0, 153, 111
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_CLIENTEDGE
+CAPTION "  It's party time!"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Dear ",IDC_STATIC,7,9,18,8
+    COMBOBOX        IDC_CALLEE,29,7,117,56,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "yes, you on &tty ",IDC_STATIC,41,23,48,8
+    COMBOBOX        IDC_TTY,98,21,48,79,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "I'd love to have a cup of tea with you. How about right now?",
+                    IDC_STATIC,19,36,112,28
+    LTEXT           "Yours,",IDC_STATIC,7,67,22,8
+    COMBOBOX        IDC_CALLER,46,73,100,30,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,18,90,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,84,90,50,14
+END
+
+IDD_T42VIEW DIALOG DISCARDABLE  0, 0, 185, 93
+STYLE DS_3DLOOK | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_SPLIT,"Static",SS_SIMPLE | SS_NOTIFY,93,1,8,91
+END
+
+IDD_ANNOUNCE DIALOGEX 0, 0, 141, 139
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_CLIENTEDGE
+CAPTION "  It's a party and you're invited!"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Yes, I'd appreciate some milk",IDOK,7,81,127,14
+    PUSHBUTTON      "Not now, have a cup of tea with my &secretary",
+                    IDC_SECRETARY,7,96,127,21,BS_MULTILINE
+    PUSHBUTTON      "&No, thanks, I'm out to cofee house.",IDCANCEL,7,118,
+                    127,14
+    LTEXT           "Dear ",IDC_STATIC,7,7,18,8
+    LTEXT           "..",IDC_CALLEE,27,7,107,8,SS_NOPREFIX
+    RTEXT           "..",IDC_TTY,7,16,127,10
+    LTEXT           "I'd love to have a cup of tea with you. How about right now?",
+                    IDC_STATIC,15,28,112,19
+    LTEXT           "Yours,",IDC_STATIC,15,50,21,8
+    RTEXT           "..",IDC_CALLER,7,59,127,20,SS_NOPREFIX
+    PUSHBUTTON      "",IDC_NOTHERE,0,132,6,6,NOT WS_VISIBLE | NOT WS_TABSTOP
+    PUSHBUTTON      "",IDC_REFUSE,7,132,6,6,NOT WS_VISIBLE | NOT WS_TABSTOP
+END
+
+IDD_OPTIONS_SOUNDS DIALOG DISCARDABLE  0, 0, 210, 154
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Sounds"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Bell in T42 conversation window:",IDC_STATIC,7,5,83,16
+    COMBOBOX        IDC_T42BELL,90,5,83,65,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Bell Browse",IDC_T42BELL_BROWSE,175,5,13,13,BS_ICON | 
+                    BS_CENTER | BS_VCENTER
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,25,196,1
+    LTEXT           "&Prompt sound alert:",IDC_STATIC,7,30,83,8
+    COMBOBOX        IDC_T42PROMPT,90,30,83,65,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Prompt Browse",IDC_T42PROMPT_BROWSE,175,30,13,13,
+                    BS_ICON | BS_CENTER | BS_VCENTER
+    CONTROL         "&Loop sound",IDC_T42PROMPT_LOOP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,36,40,53,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,50,196,1
+    LTEXT           "&Wake-up sound alert:",IDC_STATIC,7,55,83,16
+    COMBOBOX        IDC_T42WAKE,90,55,83,65,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Wake Browse",IDC_T42WAKE_BROWSE,175,55,13,13,BS_ICON | 
+                    BS_CENTER | BS_VCENTER
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,75,196,1
+    PUSHBUTTON      "Bell Play",IDC_T42BELL_PLAY,190,5,13,13,BS_ICON | 
+                    BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Prompt Play",IDC_T42PROMPT_PLAY,190,30,13,13,BS_ICON | 
+                    BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Wake Play",IDC_T42WAKE_PLAY,190,55,13,13,BS_ICON | 
+                    BS_CENTER | BS_VCENTER
+END
+
+IDD_OPTIONS_FONTS DIALOG DISCARDABLE  0, 0, 210, 154
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Format"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "F&ormat:",IDC_STATIC,7,5,24,8
+    LISTBOX         IDC_FORMATNAME,7,15,60,85,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Font &face:",IDC_STATIC,70,5,33,8
+    COMBOBOX        IDC_FACES,70,15,90,72,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Font &size:",IDC_STATIC,163,5,31,8
+    COMBOBOX        IDC_FONTSIZE,163,15,40,72,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Bold",IDC_BOLD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    70,30,39,10
+    CONTROL         "&Italic",IDC_ITALIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,115,30,31,10
+    CONTROL         "&Underline",IDC_UNDERLINE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,157,30,46,10
+    CONTROL         "Strike&out",IDC_STRIKEOUT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,70,43,44,10
+    COMBOBOX        IDC_CHARSET,115,41,88,59,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Foreground color",IDC_FORECOLOR,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,70,56,64,14
+    CONTROL         "&Background color",IDC_BACKCOLOR,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,139,56,64,14
+    CONTROL         "Sample",IDC_SAMPLE,"RICHEDIT",WS_DISABLED | WS_TABSTOP | 
+                    0xc184,70,72,133,28
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,105,196,1
+    LTEXT           "..",IDC_TIP,7,110,196,39
+END
+
+IDD_OPTIONS_SECRETARY DIALOG DISCARDABLE  0, 0, 210, 154
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Secretary"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Greeting message:",IDC_STATIC,7,7,60,8
+    EDITTEXT        IDC_GREETING,7,16,196,61,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "After greeting, stop recording when",IDC_STATIC,7,77,
+                    111,8
+    CONTROL         "&more than",IDC_DOBYTELIMIT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,85,47,12
+    LTEXT           "&characters entered, or",IDC_STATIC,96,87,70,8
+    EDITTEXT        IDC_BYTELIMIT,55,85,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_CHARSPIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,84,85,11,12
+    CONTROL         "&time limit of",IDC_DOTIMELIMIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,98,47,12
+    LTEXT           "min&utes exceeded.",IDC_STATIC,96,100,63,8
+    EDITTEXT        IDC_TIMELIMIT,55,98,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_TIMESPIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,85,98,10,12
+    CONTROL         "Stop automatically &accepting calls when",
+                    IDC_DOWINLIMIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,
+                    115,140,12
+    LTEXT           "calls in &progress",IDC_STATIC,97,129,54,8
+    EDITTEXT        IDC_WINLIMIT,55,127,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_WINSPIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,85,127,10,12
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,113,196,1
+END
+
+IDD_OPTIONS_GENERAL DIALOG DISCARDABLE  0, 0, 210, 154
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "T42 '&ntalk' daemon listening on port ",IDC_STATIC,7,7,
+                    114,8
+    EDITTEXT        IDC_NTALKPORT,123,5,80,12,ES_LOWERCASE | ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_NTALKPORTSPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,193,5,10,
+                    12
+    LTEXT           "Note: you will need to restart T42 if you change ntalk demon port number.",
+                    IDC_STATIC,40,20,163,20
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,5,0,0
+ PRODUCTVERSION 1,5,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Klever Group (http://www.klever.net/)\0"
+            VALUE "FileDescription", "T42, unix talk/ntalk implementation\0"
+            VALUE "FileVersion", "1, 5, 0, 0\0"
+            VALUE "InternalName", "T42\0"
+            VALUE "LegalCopyright", "Copyright © 1998, 2002 Klever Group (http://www.klever.net/)\0"
+            VALUE "LegalTrademarks", "Klever Group (http://www.klever.net/)\0"
+            VALUE "OriginalFilename", "T42.EXE\0"
+            VALUE "ProductName", "T42\0"
+            VALUE "ProductVersion", "1, 5, 0, 0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_T42_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_REMOTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 146
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_ANNOUNCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+
+    IDD_OPTIONS_SOUNDS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        VERTGUIDE, 90
+        VERTGUIDE, 175
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_OPTIONS_FONTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        VERTGUIDE, 67
+        VERTGUIDE, 70
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 149
+        HORZGUIDE, 100
+    END
+
+    IDD_OPTIONS_SECRETARY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+        HORZGUIDE, 77
+    END
+
+    IDD_OPTIONS_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 149
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_T42FRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "&Tea"
+    BEGIN
+        MENUITEM "Remote &user",                ID_TALK_REMOTEUSER
+        MENUITEM "&Close connection",           ID_TALK_ABORT
+        MENUITEM "&Re-connect",                 ID_TALK_RECONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "&Save",                       ID_TEA_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_TALK_CLOSE
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl-INS",             ID_EDIT_COPY
+        MENUITEM "&Paste\tShift-INS",           ID_EDIT_PASTE
+    END
+    POPUP "&Sleep"
+    BEGIN
+        MENUITEM "&Sleep\tCtrl-S",              ID_SLEEP_SLEEP
+        MENUITEM SEPARATOR
+        MENUITEM "Sleep on &minimize",          ID_SLEEP_SLEEPONMINIMIZE
+        MENUITEM "Minimi&ze on sleep",          ID_SLEEP_MINIMIZEONSLEEP
+        POPUP "&Wake-up action"
+        BEGIN
+            MENUITEM "Make &sound",                 ID_SLEEP_WAKEUPACTION_MAKESOUND
+
+            MENUITEM "&Pop-up",                     ID_SLEEP_WAKEUPACTION_POPUP
+
+        END
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "Split e&qually",              ID_WINDOW_SPLITEQUALLY
+        MENUITEM "&Save layout",                ID_WINDOW_SAVELAYOUT
+        MENUITEM "&Autosave layout",            ID_WINDOW_AUTOSAVELAYOUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Horizontal split",           ID_WINDOW_HORIZONTALSPLIT
+        MENUITEM "&Vertical split",             ID_WINDOW_VERTICALSPLIT
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide on minimize",           ID_WINDOW_HIDEINTRAYONMINIMIZE
+
+    END
+END
+
+IDM_POPUPS MENU DISCARDABLE 
+BEGIN
+    POPUP "Tray"
+    BEGIN
+        MENUITEM "Order some &tea",             ID_TRAY_T42
+        MENUITEM "&Away",                       ID_TRAY_AWAY
+        MENUITEM "Show main &window",           ID_TRAY_SHOWMAINWINDOW
+        MENUITEM "&Options",                    ID_TRAY_OPTIONS
+        MENUITEM "E&xit",                       ID_TRAY_EXIT
+    END
+    POPUP "Call Log"
+    BEGIN
+        MENUITEM "&Call back",                  ID_CALLLOG_CALLBACK
+        MENUITEM "&Delete",                     ID_CALLLOG_DELETE
+        MENUITEM "&Save to file..",             ID_CALLLOG_SAVETOFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Mark as &new",                ID_CALLLOG_MARKASNEW
+        MENUITEM "Mark as &processed",          ID_CALLLOG_MARKASPROCESSED
+        MENUITEM SEPARATOR
+        MENUITEM "&Empty Log",                  ID_CALLLOG_EMPTYLOG
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_T42FRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_SLEEP_SLEEP,         VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_REMOTE DLGINIT
+BEGIN
+    IDC_TTY, 0x403, 5, 0
+0x7474, 0x3079, "\000" 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x7079, 0x0030, 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x7679, 0x0030, 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x6179, 0x0030, 
+    IDC_TTY, 0x403, 5, 0
+0x7474, 0x3179, "\000" 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x7079, 0x0031, 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x7679, 0x0031, 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x6179, 0x0031, 
+    IDC_TTY, 0x403, 5, 0
+0x7474, 0x3279, "\000" 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x7079, 0x0032, 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x7679, 0x0032, 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x6179, 0x0032, 
+    IDC_TTY, 0x403, 5, 0
+0x7474, 0x3379, "\000" 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x7079, 0x0033, 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x7679, 0x0033, 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x6179, 0x0033, 
+    IDC_TTY, 0x403, 5, 0
+0x7474, 0x3479, "\000" 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x7079, 0x0034, 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x7679, 0x0034, 
+    IDC_TTY, 0x403, 6, 0
+0x7474, 0x6179, 0x0034, 
+    0
+END
+
+IDD_T42_DIALOG DLGINIT
+BEGIN
+    IDC_ONCALL, 0x403, 7, 0
+0x7250, 0x6d6f, 0x7470, "\000" 
+    IDC_ONCALL, 0x403, 10, 0
+0x6553, 0x7263, 0x7465, 0x7261, 0x0079, 
+    IDC_ONCALL, 0x403, 9, 0
+0x6f4e, 0x2074, 0x6568, 0x6572, "\000" 
+    IDC_ONCALL, 0x403, 7, 0
+0x6552, 0x7566, 0x6573, "\000" 
+    IDC_ONCALL, 0x403, 7, 0
+0x6749, 0x6f6e, 0x6572, "\000" 
+    IDC_ONCALLAWAY, 0x403, 7, 0
+0x7250, 0x6d6f, 0x7470, "\000" 
+    IDC_ONCALLAWAY, 0x403, 10, 0
+0x6553, 0x7263, 0x7465, 0x7261, 0x0079, 
+    IDC_ONCALLAWAY, 0x403, 9, 0
+0x6f4e, 0x2074, 0x6568, 0x6572, "\000" 
+    IDC_ONCALLAWAY, 0x403, 7, 0
+0x6552, 0x7566, 0x6573, "\000" 
+    IDC_ONCALLAWAY, 0x403, 7, 0
+0x6749, 0x6f6e, 0x6572, "\000" 
+    0
+END
+
+IDD_OPTIONS_SOUNDS DLGINIT
+BEGIN
+    IDC_T42BELL, 0x403, 11, 0
+0x7428, 0x6165, 0x642d, 0x6f72, 0x2970, "\000" 
+    IDC_T42PROMPT, 0x403, 17, 0
+0x6228, 0x696f, 0x696c, 0x676e, 0x742d, 0x6165, 0x6f70, 0x2974, "\000" 
+    IDC_T42WAKE, 0x403, 17, 0
+0x7428, 0x6165, 0x6f70, 0x2d74, 0x6877, 0x7369, 0x6c74, 0x2965, "\000" 
+    0
+END
+
+IDD_OPTIONS_FONTS DLGINIT
+BEGIN
+    IDC_FONTSIZE, 0x403, 2, 0
+0x0036, 
+    IDC_FONTSIZE, 0x403, 2, 0
+0x0038, 
+    IDC_FONTSIZE, 0x403, 2, 0
+0x0039, 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3431, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3831, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3232, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3432, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3632, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3233, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3633, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3834, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3237, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BACK                BITMAP  DISCARDABLE     "shared-data/klever-background.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDW_BEEP_DROP           WAVE    DISCARDABLE     "res\\T42-beep.wav"
+IDW_ANNOUNCE_BOILING    WAVE    DISCARDABLE     "res\\T42-boiling.wav"
+IDW_WAKE_WHISTLE        WAVE    DISCARDABLE     "res\\T42-whistle.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About T42..."
+    IDS_ERR_MALFORMEDREMOTE "Malformed remote name."
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+    ID_INDICATOR_DATE       "Date"
+    IDS_STATUS_RESOLVING    "Looking up remote host address.."
+    IDS_ERR_REMOTERESOLVEFAILED "Remote lookup failed: %s"
+    IDS_ERR_CTLCREATEFAILED "Failed to create control socket: %s"
+    IDS_ERR_CTLBINDFAILED   "Failed to bind control socket: %s"
+    IDS_ERR_CTLGETFAILED    "Failed to get control socket name: %s"
+    IDS_ERR_TCPCREATEFAILED "Failed to create conversation socket: %s"
+    IDS_ERR_TCPBINDFAILED   "Failed to bind conversation socket: %s"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CTL_BADCTL          "Remote didn't like out ctl address. This means you can not see this message."
+    IDR_T42FRAME            "Tea For Two"
+    IDS_CTL_UNKNOWNERROR    "Remote talk daemon seems to be talking different language.."
+    IDS_ERR_ANNOUNCEFAILED  "Failed to page remote user."
+    IDS_ERR_LEAVINVITEFAILED 
+                            "Failed to leave an invitation on local talk daemon."
+    IDS_ERR_TCPACCEPTFAILED "Failed to accept remote connection: %s"
+    IDS_STATUS_ANNOUNCING   "Ringing your party.."
+    IDS_ERR_CTLLDELETEFAILED 
+                            "Failed to clean up invitation on local machine."
+    IDS_ERR_CTLRDELETEFAILED 
+                            "Failed to clean up invitation on remote machine."
+    IDS_ERR_TCPERROR        "Error on conversation socket: %s"
+    IDS_STATUS_ESTABLISHED  "Connection established."
+    IDS_STATUS_CONNECTIONCLOSED "Connection closed."
+    IDS_TITLE_TEAWITH       "Tea with %s"
+    IDS_TITLE_TEAFORTWO     "Tea For Two"
+    IDS_TITLE_OPTIONS       "T42 Options"
+    IDS_SND_TEADROP         "(tea-drop)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TALK_ABORT           "Close the connection\nClose"
+    ID_TALK_CLOSE           "Close this window\nExit"
+    ID_WINDOW_CENTERSPLITTER "Center Splitter position"
+    ID_WINDOW_SPLITEQUALLY  "Center splitterbar position\nEquisplit"
+    ID_WINDOW_SAVELAYOUT    "Save window layout\nSave"
+    ID_WINDOW_AUTOSAVELAYOUT "Automatically save layout\nAutosave"
+    ID_TALK_REMOTEUSER      "Issue talk request to specific user\nTea"
+    ID_WINDOW_HORIZONTALSPLIT "Make split horizontal\nHorizontal"
+    ID_WINDOW_VERTICALSPLIT "Make split vertical\nVertical"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FIRST       "Call this user\nCall"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_COPY            "Copy selection to clipboard\nCopy"
+    ID_EDIT_PASTE           "Paste clipboard to remote\nPaste"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "T42"
+    AFX_IDS_IDLEMESSAGE     "No connection, yet."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_TCPGETFAILED    "Failed to get conversation socket name: %s"
+    IDS_STATUS_LOOKUPINVITE "Looking up invitation on remote.."
+    IDS_ERR_TCPASELFAILED   "Failed to select conversation socket: %s"
+    IDS_STATUS_WAITINGTOCONNECT "Waiting to connect with remote.."
+    IDS_ERR_TCPCONNECTFAILED "Failed to connect to remote: %s"
+    IDS_ERR_TCPLISTENFAILED "Listen on conversation socket failed: %s"
+    IDS_ERR_LTNASELFAILED   "Failed to select listening socket: %s"
+    IDS_ERR_CTLLOOKUPFAILED "Failed to connect to remote talk daemon."
+    IDS_ERR_ANNOUNCEFAILURE "Failed to page user: %s"
+    IDS_CTL_NOTHERE         "Your party isn't logged in."
+    IDS_CTL_FAILED          "Remote talk daemon failed to explain the reason."
+    IDS_CTL_MACHUNKNOWN     "Remote talk daemon doesn't want to talk to us."
+    IDS_CTL_PERMISSIONDENIED "Your party is refusing messages."
+    IDS_CTL_BADREQUEST      "Remote talk daemon doesn't recognize our request"
+    IDS_CTL_BADVERSION      "Protocol version mismatch."
+    IDS_CTL_BADADDR         "Remote didn't like our address."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TALK_RECONNECT       "Connect again to the same user\nReconnect"
+    ID_WINDOW_HIDEINTRAYONMINIMIZE 
+                            "When minimizing window hide into tray icon\nTray Minimize"
+    ID_SLEEP_SLEEP          "Put window into sleep mode\nSleep"
+    ID_SLEEP_MAKESOUND      "Make sound on wake-up\nWake-Alarm"
+    ID_SLEEP_POPUP          "Bring window to top on wake-up\nPop-up on wake"
+    ID_SLEEP_WAKEUPACTION_MAKESOUND "Make sound when waking-up\nWake-alarm"
+    ID_SLEEP_WAKEUPACTION_POPUP 
+                            "Bring window to top when waking-up\nWake-popup"
+    ID_SLEEP_SLEEPONMINIMIZE 
+                            "Put window into sleep mode when minimizing\nMinimize-sleep"
+    ID_SLEEP_MINIMIZEONSLEEP 
+                            "Minimize (or hide to tray area) on sleep\nSleep-minimize"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SND_BOILINGTEAPOT   "(boiling-teapot)"
+    IDS_SND_TEAPOTWHISTLE   "(teapot-whistle)"
+    IDS_TITLE_WAV           "Select Sound.."
+    IDS_FILTER_WAV          "Sound Files (*.wav)|*.wav||"
+    IDS_FMT_T42LOCAL        "Local\nFont used for local user pane in Tea For Two conversation window."
+    IDS_FMT_T42REMOTE       "Remote\nFont used for remote user pane in Tea For Two conversation window."
+    IDS_FMT_T42SYSTEM       "System\nFont used for system messages. Background color is taken from appropriate window format."
+    IDS_CHARSET_AUTO        "(Auto)"
+    IDS_DEFAULTGREETING     "Hello, I'm just a secretary, but feel free to have a tea with me - I have my pencil ready and I'll write down what you say, unless it will take longer than %t minutes and this small piece of paper can hold only %c characters, so drink fast and wisely!\n"
+    IDS_FILENAME_T42        "Tea for %s and %s.rtf"
+    IDS_RTF_HEAD            "{\\rtf1\\ansi\n\\tgraph500\\trqc\\cellx4000\\cellx8000\n\\qc\\sa100\\intbl {\\b %s } \\cell {\\b\\qc %s } \\cell\\row\n\\pard\n\\intbl\n\n"
+    IDS_FILE_T42CALLS       "T42.Calls"
+    IDS_FORMAT_CALLTIME     "%c"
+    IDS_FILTER_RTF          "Rich Text Format (*.rtf)|*.rtf||"
+    IDS_FORMAT_CALLDURATION "%D.%H:%M:%S"
+    IDS_FORMAT_CALLTIMELONG "%#c"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FORMAT_T42CALLHEADER 
+                            "---\\\nTime: %s\\\nCaller: %s\\\nCallee: %s\\\nCall Duration: %s\\\n--\\\n"
+    IDS_WSA_ENETDOWN        "Network is down"
+    IDS_WSA_ECONNRESET      "Connection reset by peer"
+    IDS_WSA_ECONNABORTED    "Connection aborted"
+    IDS_WSA_ECONNREFUSED    "Connection refused"
+    IDS_WSA_ENETUNREACH     "Network is unreachable"
+    IDS_WSA_ETIMEDOUT       "Connection timed out"
+    IDS_CONNECTIONCLOSED    "Connection closed"
+    IDS_WSA_NODATA          "Valid name, no data"
+    IDS_ERR_CONNECTIONCLOSED "Connection closed: %s"
+    IDS_WSA_HOSTNOTFOUND    "Host not found"
+    IDS_KLEVERNET_URL       "http://www.klever.net/"
+    IDS_RTF_DELIMITER       "\n\n\\cell\n\n"
+    IDS_RTF_TAIL            "\\cell\\row\n}\n"
+    IDS_FAILVALIDATE_NTALKPORT 
+                            "Set ntalk port to either readable representation of existing service or number between 1 and 65535."
+    IDS_CALLOG_OPEN_FAILED  "Failed to open/create secretary log database."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TEA_SAVE             "Save conversation as RTF file\nSave"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CALLOG_CLOSE_FAILED "Failed to gracefully close secretary log database."
+    IDS_DAEMON_FAIL         "Failed to set up ntalk daemon. You may still be able to use T42  for outgoing calls if you have other talk daemon installed."
+    IDS_REGISTRYKEY         "Klever Group, Inc."
+    IDS_DEFAULTCALLER       "tealover"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\T42.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

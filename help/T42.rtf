@@ -1,0 +1,194 @@
+{\rtf1\ansi
+@{\footnote
+THIS FILE WAS AUTOMATICALLY GENERATED FROM XML DOCUMENT.
+DO NOT MODIFY THIS FILE DIRECTLY. EDIT XML DOCUMENT INSTEAD
+}
+{\fonttbl{\f0\froman Times New Roman;}{\f1\fswiss Arial;}{\f3\froman Symbol;}}{\colortbl;
+   \red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+   \red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;
+   \red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;
+   \red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+  
+\pard\plain\keepn
+#{\footnote About}
+${\footnote About T42}
+{ \f1\fs18\b\sb120 About {\b T42}}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 {\b T42} is our {\i Win32} implementation of {\b\cf6 unix}{\b\cf6 ntalk} protocol.
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 It features:\pard
+\par \fi0\li0 \bullet   {\b Multihoming} - works properly on multihomed machines (ie. accepts connections/issues requests on all interfaces);
+\par \fi0\li0 \bullet   {\b Your personal secretary} - technically speaking, something like answering machine;
+\par \fi0\li0 \bullet   {\b Sleep function} - be notified of activities in backgrounded windows;\pard
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Designed to be compatible with our {\i TFTP} client/server, {\uldb {\b PumpKIN}}{\v %!ExecFile("http://www.klever.net/kin/pumpkin.html")}, that allows you to exchange files with your party while having talk sessions.
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 {\b {\i Enjoy!}}
+{
+\par\pard\plain\sb360\sa120 \f1\fs16 Copyright (c) 1998, 2002 {\uldb\cf0 Klever Group (http://www.klever.net/)}{\v %!ExecFile("http://www.klever.net/")}
+\par\qj\sb120\sa120Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+\par The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+\par \sa360 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+}
+\par \sa0\sb120\ql \f1\fs16 Author: {\b\uldb\cf11 Michael Krelin ({\i hacker@klever.net})}{\v %!ExecFile("mailto:hacker@klever.net")}
+\par \sa0\sb0 Fan mail send to {\i\uldb gefilte@klever.net}{\v %!ExecFile("mailto:gefilte@klever.net")}
+\page
+
+\pard\plain
+#{\footnote News}
+${\footnote What's New}
+\par\pard\plain\f1\fs24\qc\cf2\b 1.5 - August 19th, 2002
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  Change of license and opening the source
+\page
+
+\pard\plain\keepn
+#{\footnote Using}
+${\footnote Using T42}
+{ \f1\fs18\b\sb120 Using {\b T42}}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Once you've installed {\b T42}, run it from {\i Programs/Accessories/Klever Co.} menu. A small cup icon will appear in the notification tray area.
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Left-click on the icon will get you to the {\uldb Main Window}{\v MainWindow}, right-click  brings up the following menu:\pard
+\par \fi0\li0 \bullet   {\b Order some tea} - Initiates talk session. This will open new {\uldb Conversation Window}{\v ConversationWindow} and prompt you for request details.
+\par \fi0\li0 \bullet   {\b Away} - Toggle your away mode. It affects the way {\b T42} handles incoming calls. See {\uldb Main Window}{\v Mainwindow} for details.
+\par \fi0\li0 \bullet   {\b Show Main Window} - Toggle visibility of the {\uldb Main Window}{\v MainWindow} from which you can control some of {\b T42} options and read/maintain your recorded messages.
+\par \fi0\li0 \bullet   {\b Options} - Select this to bring up {\uldb Options dialog}{\v Options} so that you can customize {\b T42} to suit your needs.
+\par \fi0\li0 \bullet   {\b Exit} - This is not likely to happen, but if you want to exit {\b T42} and unload it from memory - that's what {\b Exit} is for.\pard
+\page
+
+\pard\plain\keepn
+#{\footnote MainWindow}
+${\footnote Main Window}
+{ \f1\fs18\b\sb120 Main {\b T42} Window}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Main Window is a {\b T42} Control Center, it's exactly mouse-click away from most of {\b T42} functions. It consists of\pard
+\par \fi0\li0 \bullet   {\b On Call} and {\b On Call when away} dropdown lists let you select the action to take when incoming call occurs in 'normal' and 'away' mode. Chose one of
+    \pard
+\par \fi0\li0 \bullet   {\i Prompt} - Ask you what to do before taking any actions;
+\par \fi0\li0 \bullet   {\i Secretary} - Relay incoming calls to your {\uldb personal secretary}{\v SecretaryOptions}. Some prefer to call it answering machine.
+\par \fi0\li0 \bullet   {\i Not here} - Tell the caller you're not here ({\i not logged in}) and terminate connection.
+\par \fi0\li0 \bullet   {\i Refuse} - Tell the caller you're not accepting messages and terminate connection.
+\par \fi0\li0 \bullet   {\i Ignore} - Pretend that you didn't notice.\pard
+\par \fi0\li0 \bullet   {\b Away} button toggles your away mode. When an incoming call occurs {\b T42} takes action based upon away mode and options selected in {\b On Call} and {\b On Call when away} dropdown lists.
+\par \fi0\li0 \bullet   {\b Tea} button initiates new talk session. This will open new {\uldb Conversation Window}{\v ConversationWindow} and prompt you for {\uldb request details}{\v RemoteDialog}.
+\par \fi0\li0 \bullet   {\b Options} button brings up {\uldb Configuration Dialog}{\v Options} that lets you customize {\b T42} according to your needs.
+\par \fi0\li0 \bullet   {\b Exit} - button closes {\b T42} windows and removes {\b T42} from memory.
+\par \fi0\li0 \bullet   {\b Help} button enters the help system. If you got this far, you probably don't need further explanations.
+\par \fi0\li0 \bullet   {\b Recorded messages} list this is the list of messages recorded by your secretary. Messages are sorted by age, last ones first. Unanswered messages have a brighter cup icon unless you've explicitly marked the message as processed (see below for details). Right-click on the list entry presents you with popup menu from which you can:
+    \pard
+\par \fi0\li0 \bullet   {\i Call back} the person who left the message. This is identical to initiating new talk session and entering caller's data manually. Note: if the caller has a dynamic IP address and have already disconnected from his ISP and reconnected back this may not work.
+\par \fi0\li0 \bullet   {\i Delete} selected message(s). If you don't need recorded message anymore you can throw it away by selecting this.
+\par \fi0\li0 \bullet   {\i Save to file..} menu option lets you save message into {\i RTF} file. Then you may print message text, import it into your {\b\cf6 MS Word} documents or do with it whatever you want.
+\par \fi0\li0 \bullet   {\i Mark as new} message lets you force message state to 'unprocessed' which means that it will have brighter cup icon in front of it which is supposed to help you keep track of messages that you need to take care of.
+\par \fi0\li0 \bullet   {\i Mark as processed} message is the reverse of {\i Mark as new} command.
+\par \fi0\li0 \bullet   {\i Empty Log} simply removes all messages from the log.\pard
+\par \fi0\li0 \bullet   {\b Message preview window} - the recorded message itself is shown in this window.\pard
+\page
+
+\pard\plain\keepn
+#{\footnote AnnounceDialog}
+${\footnote Announce Dialog}
+{ \f1\fs18\b\sb120 Announce Dialog Window}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 When incoming call occurs and you're set to get a prompt this dialog pops up. This dialog lets you chose what further actions you want {\b T42} to take and see the request details. The dialog looks like this:
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 \{bmct announce.bmp\}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Incoming call details are in {\b bold}. The details are:\pard
+\par \fi0\li0 \bullet   {\b callee name} - this is your name, or what caller thinks it is. ({\i kamel} in this example)
+\par \fi0\li0 \bullet   {\b tty} - terminal on which remote thinks you're logged on. This is not important for incoming requests. Normally this is only used on unix machines. ({\i tty0} in this example)
+\par \fi0\li0 \bullet   {\b caller's name} - local username and hostname/IP address of caller. ({\i hacker@localhost} in this example)\pard
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Use {\b Yes, I'd appreciate some milk} button to answer the call and establish talk connection with caller, {\b Not now, have a cup of tea with secretary} to relay the call to your secretary and {\b No, thanks, I'm out to coffee house} to ignore call.
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 If you don't answer in 30 seconds the call is relayed to the secretary.
+\page
+
+\pard\plain\keepn
+#{\footnote Options}
+${\footnote Options}
+{ \f1\fs18\b\sb120 Options}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Options is a tabbed dialog box where you're supposed to change {\b T42} settings. It consists of\pard
+\par \fi0\li0 \bullet   {\uldb General tab}{\v GeneralOptions} - tune general {\b T42} options. Not much to set there so far.
+\par \fi0\li0 \bullet   {\uldb Format tab}{\v FontsOptions} - set up text formats (fonts, colors, etc.) for various windows.
+\par \fi0\li0 \bullet   {\uldb Sounds tab}{\v SoundsOptions} - customize {\b T42} bells and whistles in this dialog.
+\par \fi0\li0 \bullet   {\uldb Secretary tab}{\v SecretaryOptions} - teach your secretary manners here.\pard
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Note: you might need to restart {\b T42} for some options to take effect.
+\page
+
+\pard\plain\keepn
+#{\footnote GeneralOptions}
+${\footnote General Options}
+{ \f1\fs18\b\sb120 General Options}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Currently you can only set up talk port here. Talk port is the UDP> port {\b\cf6 talk daemon} listens for incoming connections at. You can enter either number of port or service name (as specified in your {\b services} file) here. Do not change this if you don't know what you're doing and don't understand the instructions above.
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Note: you have to restart {\b T42} for this option to take effect.
+\page
+
+\pard\plain\keepn
+#{\footnote FontsOptions}
+${\footnote Fonts Options}
+{ \f1\fs18\b\sb120 Fonts}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Set up various fonts for {\b T42} to use according to your own preferences. There are three formats for you to set:\pard
+\par \fi0\li0 \bullet   {\b Local} - this is what your typing appears as.
+\par \fi0\li0 \bullet   {\b Remote} - this is what your party's typing should look like.
+\par \fi0\li0 \bullet   {\b System} - this is what system messages, like disconnection cause, etc. in talk windows look like.\pard
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 For each format you can set up {\b Font face}, {\b Font size}, {\b bold}, {\i italic}, {\ul underline}, {\strike strikeout} and {\b character set} to use. For some formats you can also set {\b foreground} and {\b background} colors.
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Note: these settings only affect new windows.
+\page
+
+\pard\plain\keepn
+#{\footnote SoundsOptions}
+${\footnote Sounds Options}
+{ \f1\fs18\b\sb120 Sounds}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 This is where you customize {\b T42} bells and whistles, specifically:\pard
+\par \fi0\li0 \bullet   {\b Bell in {\b T42} window} - the sound to produce when you or your party sends ASCII BELL characters ({\b Ctrl-G}).
+\par \fi0\li0 \bullet   {\b Prompt sound alert} the sound used to notify you of incoming call. You may also set {\b loop} for this sound to make it continuous for the {\uldb Announce Window}{\v AnnounceDialog} lifetime.
+\par \fi0\li0 \bullet   {\b Wake-up sound alert} the sound used to let you know that {\b T42} leaves {\b sleep mode} (see {\uldb Conversation Window}{\v ConversationWindow} for details).\pard
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 For each sound you can either specify {\b .WAV} file (use browse button to choose it) or internal sound from drop-down list. You can also use play button to check what it sounds like.
+\page
+
+\pard\plain\keepn
+#{\footnote SecretaryOptions}
+${\footnote Secretary Options}
+{ \f1\fs18\b\sb120 Secretary}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 This is the place to teach your secretary how to behave. The things you can ask for are:\pard
+\par \fi0\li0 \bullet   {\b Greeting message} - this is the message your secretary greets caller with. When greeting is transferred your secretary will automatically substitute time limit (see below) instead of {\b %t} and characters limit (see below) instead of {\b %c}.
+\par \fi0\li0 \bullet   After greeting the caller your secretary will record the message until the caller will exceed either {\b time limit} or {\b character} limit. You may choose to disable either or both limits.
+\par \fi0\li0 \bullet   You may also limit your secretary's ability to handle multiple calls to provide each caller with better service. Normally the optimal limit depends on your system resources and your callers' activities.\pard
+\page
+
+\pard\plain\keepn
+#{\footnote RemoteDialog}
+${\footnote Remote Dialog}
+{ \f1\fs18\b\sb120 Remote Dialog}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Whenever you want to issue talk request you're presented with a dialog in which you can enter your request details, it looks like this:
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 \{bmct invite.bmp\}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 The call details are:\pard
+\par \fi0\li0 \bullet   {\i Callee address} - The address is in the form {\b user@host}, {\i kamel@192.168.168.192} in this example.
+\par \fi0\li0 \bullet   {\i tty} - terminal line your party is logged on. It's only relevant when the callee is on unix system. If you don't know what to put in there - just leave it blank.
+\par \fi0\li0 \bullet   {\i Your username} - this is how your call will appear to caller. Just don't leave it empty.\pard
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Note: your party address is {\b not} your party's email address, even if it looks similar. {\b host} part is either hostname your party logged in or {\b IP address} of the host. If your party has {\b dynamically assigned} IP address, one way to determine it is too look up in the headers of e-mail sent {\b after} your party's established internet connection last time (i.e. very recent one) and find something like
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Received: from 209.203.65.22 (ppp22.kross.klever.net [209.203.65.22]) by mail.elsinore.klever.net (8.8.7/8.8.7) with SMTP id RAA15788
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 In this case the IP address would be {\b 209.203.65.22} and the host name {\b ppp22.kross.klever.net}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 So, you're advised to talk to {\b whoever@209.203.65.22} or {\b whoever@ppp22.kross.klever.net}. You don't need to worry if your party has a static IP address.
+\page
+
+\pard\plain\keepn
+#{\footnote ConversationWindow}
+${\footnote Conversation Window}
+{ \f1\fs18\b\sb120 Conversation Window}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 This is the window where actual conversation takes place. It is split into two panes for you and for your party. It is split either horizontal or vertical. In the former case you type in the upper half and see what your party does in the lower. In case of vertical orientation your part is the leftmost one. All control actions are done via menu bar. Here goes an explanation for each command:\pard
+\par \fi0\li0 \bullet   {\b Tea}\pard
+\par \fi0\li0 \bullet   {\i Remote user} - initiate talk session for this window. You will be prompted for {\uldb your party's whereabouts}{\v RemoteDialog}.
+\par \fi0\li0 \bullet   {\i Close connection} - terminate talk session. This puts window into inactive state until you initiate new session.
+\par \fi0\li0 \bullet   {\i Re-connect} - re-initiate talk session to the same party, for instance if you've lost connection.
+\par \fi0\li0 \bullet   {\i Save} - if there was something important said you can save the whole conversation into RTF formatted file for future reference.
+\par \fi0\li0 \bullet   {\i Exit} - will close conversation window and terminate the connection.\pard
+\par \fi0\li0 \bullet   {\b Edit}\pard
+\par \fi0\li0 \bullet   {\i Copy} - copy currently selected text into windows clipboard.
+\par \fi0\li0 \bullet   {\i Paste} - paste window selection into your current conversation.\pard
+\par \fi0\li0 \bullet   {\b Sleep}\pard
+\par \fi0\li0 \bullet   {\i Sleep} - put your session to sleep. When your party shows some kind of activity {\b Wake-up action} will be taken (see below).
+\par \fi0\li0 \bullet   {\i Sleep on minimize} - check this if you want to activate sleep mode whenever you minimize conversation window.
+\par \fi0\li0 \bullet   {\i Minimize on sleep} - check this if you want to minimize window whenever you put it into sleep mode.
+\par \fi0\li0 \bullet   {\i Wake-up action} - Actions to take whenever remote user shows activity in sleep mode. Possible actions are:
+      \pard
+\par \fi0\li0 \bullet   Make sound - check this if you want {\b T42} to produce sound (as specified in {\uldb Sounds Options}{\v SoundsOptions}) whenever it leaves sleep mode.
+\par \fi0\li0 \bullet   Pop-up - check this if you want {\b T42} to bring conversation window to foreground and restore if it is minimized whenever it leaves sleep mode.\pard\pard
+\par \fi0\li0 \bullet   {\b Window}\pard
+\par \fi0\li0 \bullet   {\i Split equally} split local and remote panes in equal propotions.
+\par \fi0\li0 \bullet   {\i Save layout} - save window position, size and split proportions for future sessions.
+\par \fi0\li0 \bullet   {\i Autosave layout} - automatically save layout whenever you close conversation window.
+\par \fi0\li0 \bullet   {\i Horizontal split}/{\i Vertical split} - chose your orientation.
+\par \fi0\li0 \bullet   {\i Hide on minimize} - set {\b T42} to hide window into notification tray icon whenever you minimize it.\pard\pard
+\page
+}

@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<winhelp>
+ <topic id="About" title="About T42">
+  <heading scroll="no">About <kin>T42</kin></heading>
+  <p><kin>T42</kin> is our <term>Win32</term> implementation of <product>unix</product> <product>ntalk</product> protocol.</p>
+  <p>It features:</p>
+  <ul>
+   <li><b>Multihoming</b> - works properly on multihomed machines (ie. accepts connections/issues requests on all interfaces);</li>
+   <li><b>Your personal secretary</b> - technically speaking, something like answering machine;</li>
+   <li><b>Sleep function</b> - be notified of activities in backgrounded windows;</li>
+  </ul>
+  <p>Designed to be compatible with our <term>TFTP</term> client/server, <kin href="http://www.klever.net/kin/pumpkin.html">PumpKIN</kin>, that allows you to exchange files with your party while having talk sessions.</p>
+  <p/>
+  <p><b><i>Enjoy!</i></b></p>
+  <license years="1998, 2002"/>
+  <credits/>
+ </topic>
+ <topic id="News" title="What's New">
+  <newsfor version="1.5" date="August 19th, 2002">
+   <ni>Change of license and opening the source</ni>
+  </newsfor>
+ </topic>
+ <topic id="Using" title="Using T42">
+  <heading scroll="no">Using <kin>T42</kin></heading>
+  <p>Once you've installed <kin>T42</kin>, run it from <i>Programs/Accessories/Klever Co.</i> menu. A small cup icon will appear in the notification tray area.</p>
+  <p>Left-click on the icon will get you to the <a href="#MainWindow">Main Window</a>, right-click  brings up the following menu:</p>
+  <ul>
+   <li><b>Order some tea</b> - Initiates talk session. This will open new <a href="#ConversationWindow">Conversation Window</a> and prompt you for request details.</li>
+   <li><b>Away</b> - Toggle your away mode. It affects the way <kin>T42</kin> handles incoming calls. See <a href="#Mainwindow">Main Window</a> for details.</li>
+   <li><b>Show Main Window</b> - Toggle visibility of the <a href="#MainWindow">Main Window</a> from which you can control some of <kin>T42</kin> options and read/maintain your recorded messages.</li>
+   <li><b>Options</b> - Select this to bring up <a href="#Options">Options dialog</a> so that you can customize <kin>T42</kin> to suit your needs.</li>
+   <li><b>Exit</b> - This is not likely to happen, but if you want to exit <kin>T42</kin> and unload it from memory - that's what <b>Exit</b> is for.</li>
+  </ul>
+ </topic>
+ <topic id="MainWindow" title="Main Window">
+  <heading scroll="no">Main <kin>T42</kin> Window</heading>
+  <p>Main Window is a <kin>T42</kin> Control Center, it's exactly mouse-click away from most of <kin>T42</kin> functions. It consists of</p>
+  <ul>
+   <li><b>On Call</b> and <b>On Call when away</b> dropdown lists let you select the action to take when incoming call occurs in 'normal' and 'away' mode. Chose one of
+    <ul>
+     <li><i>Prompt</i> - Ask you what to do before taking any actions;</li>
+     <li><i>Secretary</i> - Relay incoming calls to your <a href="#SecretaryOptions">personal secretary</a>. Some prefer to call it answering machine.</li>
+     <li><i>Not here</i> - Tell the caller you're not here (<i>not logged in</i>) and terminate connection.</li>
+     <li><i>Refuse</i> - Tell the caller you're not accepting messages and terminate connection.</li>
+     <li><i>Ignore</i> - Pretend that you didn't notice.</li>
+    </ul>
+   </li>
+   <li><b>Away</b> button toggles your away mode. When an incoming call occurs <kin>T42</kin> takes action based upon away mode and options selected in <b>On Call</b> and <b>On Call when away</b> dropdown lists.</li>
+   <li><b>Tea</b> button initiates new talk session. This will open new <a href="#ConversationWindow">Conversation Window</a> and prompt you for <a href="#RemoteDialog">request details</a>.</li>
+   <li><b>Options</b> button brings up <a href="#Options">Configuration Dialog</a> that lets you customize <kin>T42</kin> according to your needs.</li>
+   <li><b>Exit</b> - button closes <kin>T42</kin> windows and removes <kin>T42</kin> from memory.</li>
+   <li><b>Help</b> button enters the help system. If you got this far, you probably don't need further explanations.</li>
+   <li><b>Recorded messages</b> list this is the list of messages recorded by your secretary. Messages are sorted by age, last ones first. Unanswered messages have a brighter cup icon unless you've explicitly marked the message as processed (see below for details). Right-click on the list entry presents you with popup menu from which you can:
+    <ul>
+     <li><i>Call back</i> the person who left the message. This is identical to initiating new talk session and entering caller's data manually. Note: if the caller has a dynamic IP address and have already disconnected from his ISP and reconnected back this may not work.</li>
+     <li><i>Delete</i> selected message(s). If you don't need recorded message anymore you can throw it away by selecting this.</li>
+     <li><i>Save to file..</i> menu option lets you save message into <term>RTF</term> file. Then you may print message text, import it into your <product>MS Word</product> documents or do with it whatever you want.</li>
+     <li><i>Mark as new</i> message lets you force message state to 'unprocessed' which means that it will have brighter cup icon in front of it which is supposed to help you keep track of messages that you need to take care of.</li>
+     <li><i>Mark as processed</i> message is the reverse of <i>Mark as new</i> command.</li>
+     <li><i>Empty Log</i> simply removes all messages from the log.</li>
+    </ul>
+   </li>
+   <li><b>Message preview window</b> - the recorded message itself is shown in this window.</li>
+  </ul>
+ </topic>
+ <topic id="AnnounceDialog" title="Announce Dialog">
+  <heading scroll="no">Announce Dialog Window</heading>
+  <p>When incoming call occurs and you're set to get a prompt this dialog pops up. This dialog lets you chose what further actions you want <kin>T42</kin> to take and see the request details. The dialog looks like this:</p>
+  <p><image source="announce.bmp"/></p>
+  <p>Incoming call details are in <b>bold</b>. The details are:</p>
+  <ul>
+   <li><b>callee name</b> - this is your name, or what caller thinks it is. (<i>kamel</i> in this example)</li>
+   <li><b>tty</b> - terminal on which remote thinks you're logged on. This is not important for incoming requests. Normally this is only used on unix machines. (<i>tty0</i> in this example)</li>
+   <li><b>caller's name</b> - local username and hostname/IP address of caller. (<i>hacker@localhost</i> in this example)</li>
+  </ul>
+  <p>Use <b>Yes, I'd appreciate some milk</b> button to answer the call and establish talk connection with caller, <b>Not now, have a cup of tea with secretary</b> to relay the call to your secretary and <b>No, thanks, I'm out to coffee house</b> to ignore call.</p>
+  <p>If you don't answer in 30 seconds the call is relayed to the secretary.</p>
+ </topic>
+ <topic id="Options" title="Options">
+  <heading scroll="no">Options</heading>
+  <p>Options is a tabbed dialog box where you're supposed to change <kin>T42</kin> settings. It consists of</p>
+  <ul>
+   <li><a href="#GeneralOptions">General tab</a> - tune general <kin>T42</kin> options. Not much to set there so far.</li>
+   <li><a href="#FontsOptions">Format tab</a> - set up text formats (fonts, colors, etc.) for various windows.</li>
+   <li><a href="#SoundsOptions">Sounds tab</a> - customize <kin>T42</kin> bells and whistles in this dialog.</li>
+   <li><a href="#SecretaryOptions">Secretary tab</a> - teach your secretary manners here.</li>
+  </ul>
+  <p>Note: you might need to restart <kin>T42</kin> for some options to take effect.</p>
+ </topic>
+ <topic id="GeneralOptions" title="General Options">
+  <heading scroll="no">General Options</heading>
+  <p>Currently you can only set up talk port here. Talk port is the UDP> port <product>talk daemon</product> listens for incoming connections at. You can enter either number of port or service name (as specified in your <b>services</b> file) here. Do not change this if you don't know what you're doing and don't understand the instructions above.</p>
+  <p>Note: you have to restart <kin>T42</kin> for this option to take effect.</p>
+ </topic>
+ <topic id="FontsOptions" title="Fonts Options">
+  <heading scroll="no">Fonts</heading>
+  <p>Set up various fonts for <kin>T42</kin> to use according to your own preferences. There are three formats for you to set:</p>
+  <ul>
+   <li><b>Local</b> - this is what your typing appears as.</li>
+   <li><b>Remote</b> - this is what your party's typing should look like.</li>
+   <li><b>System</b> - this is what system messages, like disconnection cause, etc. in talk windows look like.</li>
+  </ul>
+  <p>For each format you can set up <b>Font face</b>, <b>Font size</b>, <b>bold</b>, <i>italic</i>, <u>underline</u>, <strike>strikeout</strike> and <b>character set</b> to use. For some formats you can also set <b>foreground</b> and <b>background</b> colors.</p>
+  <p>Note: these settings only affect new windows.</p>
+ </topic>
+ <topic id="SoundsOptions" title="Sounds Options">
+  <heading scroll="no">Sounds</heading>
+  <p>This is where you customize <kin>T42</kin> bells and whistles, specifically:</p>
+  <ul>
+   <li><b>Bell in <kin>T42</kin> window</b> - the sound to produce when you or your party sends ASCII BELL characters (<b>Ctrl-G</b>).</li>
+   <li><b>Prompt sound alert</b> the sound used to notify you of incoming call. You may also set <b>loop</b> for this sound to make it continuous for the <a href="#AnnounceDialog">Announce Window</a> lifetime.</li>
+   <li><b>Wake-up sound alert</b> the sound used to let you know that <kin>T42</kin> leaves <b>sleep mode</b> (see <a href="#ConversationWindow">Conversation Window</a> for details).</li>
+  </ul>
+  <p>For each sound you can either specify <b>.WAV</b> file (use browse button to choose it) or internal sound from drop-down list. You can also use play button to check what it sounds like.</p>
+ </topic>
+ <topic id="SecretaryOptions" title="Secretary Options">
+  <heading scroll="no">Secretary</heading>
+  <p>This is the place to teach your secretary how to behave. The things you can ask for are:</p>
+  <ul>
+   <li><b>Greeting message</b> - this is the message your secretary greets caller with. When greeting is transferred your secretary will automatically substitute time limit (see below) instead of <b>%t</b> and characters limit (see below) instead of <b>%c</b>.</li>
+   <li>After greeting the caller your secretary will record the message until the caller will exceed either <b>time limit</b> or <b>character</b> limit. You may choose to disable either or both limits.</li>
+   <li>You may also limit your secretary's ability to handle multiple calls to provide each caller with better service. Normally the optimal limit depends on your system resources and your callers' activities.</li>
+  </ul>
+ </topic>
+ <topic id="RemoteDialog" title="Remote Dialog">
+  <heading scroll="no">Remote Dialog</heading>
+  <p>Whenever you want to issue talk request you're presented with a dialog in which you can enter your request details, it looks like this:</p>
+  <p><image source="invite.bmp"/></p>
+  <p>The call details are:</p>
+  <ul>
+   <li><i>Callee address</i> - The address is in the form <b>user@host</b>, <i>kamel@192.168.168.192</i> in this example.</li>
+   <li><i>tty</i> - terminal line your party is logged on. It's only relevant when the callee is on unix system. If you don't know what to put in there - just leave it blank.</li>
+   <li><i>Your username</i> - this is how your call will appear to caller. Just don't leave it empty.</li>
+  </ul>
+  <p>Note: your party address is <b>not</b> your party's email address, even if it looks similar. <b>host</b> part is either hostname your party logged in or <b>IP address</b> of the host. If your party has <b>dynamically assigned</b> IP address, one way to determine it is too look up in the headers of e-mail sent <b>after</b> your party's established internet connection last time (i.e. very recent one) and find something like</p>
+  <p>Received: from 209.203.65.22 (ppp22.kross.klever.net [209.203.65.22]) by mail.elsinore.klever.net (8.8.7/8.8.7) with SMTP id RAA15788</p>
+  <p>In this case the IP address would be <b>209.203.65.22</b> and the host name <b>ppp22.kross.klever.net</b></p>
+  <p>So, you're advised to talk to <b>whoever@209.203.65.22</b> or <b>whoever@ppp22.kross.klever.net</b>. You don't need to worry if your party has a static IP address.</p>
+ </topic>
+ <topic id="ConversationWindow" title="Conversation Window">
+  <heading scroll="no">Conversation Window</heading>
+  <p>This is the window where actual conversation takes place. It is split into two panes for you and for your party. It is split either horizontal or vertical. In the former case you type in the upper half and see what your party does in the lower. In case of vertical orientation your part is the leftmost one. All control actions are done via menu bar. Here goes an explanation for each command:</p>
+  <ul>
+   <li><b>Tea</b>
+    <ul>
+     <li><i>Remote user</i> - initiate talk session for this window. You will be prompted for <a href="#RemoteDialog">your party's whereabouts</a>.</li>
+     <li><i>Close connection</i> - terminate talk session. This puts window into inactive state until you initiate new session.</li>
+     <li><i>Re-connect</i> - re-initiate talk session to the same party, for instance if you've lost connection.</li>
+     <li><i>Save</i> - if there was something important said you can save the whole conversation into RTF formatted file for future reference.</li>
+     <li><i>Exit</i> - will close conversation window and terminate the connection.</li>
+    </ul>
+   </li>
+   <li><b>Edit</b>
+    <ul>
+     <li><i>Copy</i> - copy currently selected text into windows clipboard.</li>
+     <li><i>Paste</i> - paste window selection into your current conversation.</li>
+    </ul>
+   </li>
+   <li><b>Sleep</b>
+    <ul>
+     <li><i>Sleep</i> - put your session to sleep. When your party shows some kind of activity <b>Wake-up action</b> will be taken (see below).</li>
+     <li><i>Sleep on minimize</i> - check this if you want to activate sleep mode whenever you minimize conversation window.</li>
+     <li><i>Minimize on sleep</i> - check this if you want to minimize window whenever you put it into sleep mode.</li>
+     <li><i>Wake-up action</i> - Actions to take whenever remote user shows activity in sleep mode. Possible actions are:
+      <ul>
+       <li>Make sound - check this if you want <kin>T42</kin> to produce sound (as specified in <a href="#SoundsOptions">Sounds Options</a>) whenever it leaves sleep mode.</li>
+       <li>Pop-up - check this if you want <kin>T42</kin> to bring conversation window to foreground and restore if it is minimized whenever it leaves sleep mode.</li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li><b>Window</b>
+    <ul>
+     <li><i>Split equally</i> split local and remote panes in equal propotions.</li>
+     <li><i>Save layout</i> - save window position, size and split proportions for future sessions.</li>
+     <li><i>Autosave layout</i> - automatically save layout whenever you close conversation window.</li>
+     <li><i>Horizontal split</i>/<i>Vertical split</i> - chose your orientation.</li>
+     <li><i>Hide on minimize</i> - set <kin>T42</kin> to hide window into notification tray icon whenever you minimize it.</li>
+    </ul>
+   </li>
+  </ul>
+ </topic>
+</winhelp>
