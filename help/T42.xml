@@ -9,20 +9,20 @@
    <li><b>Your personal secretary</b> - technically speaking, something like answering machine;</li>
    <li><b>Sleep function</b> - be notified of activities in backgrounded windows;</li>
   </ul>
-  <p>Designed to be compatible with our <term>TFTP</term> client/server, <kin href="http://www.klever.net/kin/pumpkin.html">PumpKIN</kin>, that allows you to exchange files with your party while having talk sessions.</p>
+  <p>Designed to be compatible with our <term>TFTP</term> client/server, <kin href="http://kin.klever.net/pumpkin/">PumpKIN</kin>, that allows you to exchange files with your party while having talk sessions.</p>
   <p/>
   <p><b><i>Enjoy!</i></b></p>
-  <license years="1998, 2002"/>
+  <license years="1998-2004"/>
   <credits/>
  </topic>
  <topic id="News" title="What's New">
-  <newsfor version="1.5" date="August 19th, 2002">
+  <newsfor version="1.5" date="July 11th, 2004">
    <ni>Change of license and opening the source</ni>
   </newsfor>
  </topic>
  <topic id="Using" title="Using T42">
   <heading scroll="no">Using <kin>T42</kin></heading>
-  <p>Once you've installed <kin>T42</kin>, run it from <i>Programs/Accessories/Klever Co.</i> menu. A small cup icon will appear in the notification tray area.</p>
+  <p>Once you've installed <kin>T42</kin>, run it from <i>Programs/Klever Group</i> menu. A small cup icon will appear in the notification tray area.</p>
   <p>Left-click on the icon will get you to the <a href="#MainWindow">Main Window</a>, right-click  brings up the following menu:</p>
   <ul>
    <li><b>Order some tea</b> - Initiates talk session. This will open new <a href="#ConversationWindow">Conversation Window</a> and prompt you for request details.</li>
