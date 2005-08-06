@@ -12,10 +12,13 @@
   <p>Designed to be compatible with our <term>TFTP</term> client/server, <kin href="http://kin.klever.net/pumpkin/">PumpKIN</kin>, that allows you to exchange files with your party while having talk sessions.</p>
   <p/>
   <p><b><i>Enjoy!</i></b></p>
-  <license years="1998-2004"/>
+  <license years="1998-2005"/>
   <credits/>
  </topic>
  <topic id="News" title="What's New">
+  <newsfor version="1.5.1" date="August 6th, 2005">
+   <ni>Fixed uninstall procedure so that it works on XP</ni>
+  </newsfor>
   <newsfor version="1.5" date="July 11th, 2004">
    <ni>Change of license and opening the source</ni>
   </newsfor>

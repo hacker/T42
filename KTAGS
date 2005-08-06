@@ -2,7 +2,7 @@ about-date	T42.rc	/LTEXT\s\+"Copyright /;"	kind:d
 about-version	T42.rc	/LTEXT\s\+"T42, Version/;"	kind:v
 help-license-date	./help/T42.xml	/<license\s/;"	kind:d
 help-news	./help/T42.xml	/<newsfor\s/
-install-version	./install/install.cpp	/^#define\s\+KINAME\s\+"/;"	kind:v
+install-version	./install/install.cpp	/^#define\s\+VERSION\s\+"/;"	kind:v
 install-vsinfo-date	install/install.rc	/^\s\+VALUE\s\+"LegalCopyright",/;"	kind:d
 install-vsinfo-numeric-version	install/install.rc	/^\s\+FILEVERSION\s\+/;"	kind:v
 install-vsinfo-string-version	install/install.rc	/^\s\+VALUE\s\+"FileVersion",/;"	kind:v
